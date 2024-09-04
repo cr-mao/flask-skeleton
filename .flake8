@@ -1,0 +1,5 @@
+# -*- mode: conf -*-
+[flake8]
+max-line-length = 160
+ignore = F401, F841
+select = F, E999
