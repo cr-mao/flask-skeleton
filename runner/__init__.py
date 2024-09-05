@@ -7,7 +7,7 @@ import logging
 import os
 import sys
 from flask import Flask
-from runner.confs import is_dev
+from runner.confs import is_dev, log_level
 from runner.resource import R
 
 RUNNER_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -26,7 +26,7 @@ class AppLication(object):
         """
         from runner.logger.logger import set_logger
         # 单例 ，请使用这个logger
-        self.logger = set_logger()
+        self.logger = set_logger(log_level)
         # 初始化一些全局使用的资源
         R.initial()
         # 路由
@@ -36,7 +36,6 @@ class AppLication(object):
         from runner.routes.game_route import game_bp
         # 注册蓝图
         self.flaskApp.register_blueprint(game_bp)
-
 
         # 开发环境下设置跨域
         # if is_dev:
