@@ -1,8 +1,7 @@
-import logging
-
 from .base_handler import api
 from .base_handler import BaseHandler
 from runner import app
+from runner.services.account_service import AccountService
 
 logger = app.logger
 
@@ -22,5 +21,7 @@ class demoHandler(BaseHandler):
     })
     def info(self):
         acc_types = self.payload.get('arg1') or 1
-        logger.info("ddddkdkdk22222")
-        return self.make_return(data=acc_types)
+        logger.info(acc_types)
+        data = AccountService.get_instance().consume_log_type_list()
+        logger.info("this a demo log print")
+        return self.make_return(data=data)

@@ -10,6 +10,7 @@ from runner import codes
 from runner.confs import is_dev
 
 
+# api 装饰器方法
 def api(schema=None, need_login=False):
     def decorator(func):
         def wrapper(*args, **kwargs):

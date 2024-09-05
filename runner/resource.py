@@ -17,11 +17,11 @@ def create_sessionmaker(db_config):
 # 资源对象
 class Resource:
     def __init__(self):
-        self.AdbSession = None
+        self.DbSession = None
 
     def initial(self):
         # 数据库连接资源
-        self.AdbSession = create_sessionmaker(confs.ADB_DATABASE)
+        self.DbSession = create_sessionmaker(confs.ADB_DATABASE)
 
 
 R = Resource()

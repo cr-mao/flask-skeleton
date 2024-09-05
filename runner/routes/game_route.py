@@ -1,6 +1,6 @@
 from flask import Blueprint
 
-from runner.handlers.demohandler import demoHandler
+from runner.handlers.demo_handler import demoHandler
 
 game_handlers = {
     'domo_api': demoHandler
