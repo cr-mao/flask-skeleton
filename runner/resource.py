@@ -21,7 +21,7 @@ class Resource:
 
     def initial(self):
         # 数据库连接资源
-        self.DbSession = create_sessionmaker(confs.ADB_DATABASE)
+        self.DbSession = create_sessionmaker(confs.DATABASE)
 
 
 R = Resource()

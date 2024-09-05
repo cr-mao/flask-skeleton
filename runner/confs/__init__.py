@@ -22,7 +22,7 @@ def get_db_url(config: dict) -> str:
     )
 
 
-ADB_DATABASE = {
+DATABASE = {
     "host": os.environ.get("DB_HOST"),
     "port": os.environ.get("DB_PORT"),
     "user": os.environ.get("DB_USERNAME"),
