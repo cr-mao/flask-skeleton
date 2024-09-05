@@ -10,7 +10,11 @@ api 风格： jsonschema
 
 ```shell
 export PYTHONPATH=.
+# 启动web api服务
 python scripts/web.py
+
+# demo job服务
+python scripts/demo_job.py
 ```
 
 ### docs
