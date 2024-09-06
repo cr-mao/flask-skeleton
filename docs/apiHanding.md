@@ -4,7 +4,7 @@ runner的API不是REST风格，更接近于json-rpc风格。
 
 ### 使用jsonschema做参数校验
 
-[jsonschema](https://json-schema.org/understanding-json-schema/index.html)
+[jsonschema](https://json-schema.org/)
 
 - 相比常见的各种http校验库，jsonschema更加简单、清晰、容易掌握。
 

@@ -1,11 +1,7 @@
-from runner import R
-from runner.logger.logger import set_logger
-from runner.confs import log_level
-
-print(log_level)
-logger = set_logger(log_level)
-# 资源初始化，db初始化
-R.initial()
+# -*- coding: utf-8 -*-
+from runner import app
 
 if __name__ == '__main__':
-    logger.info("hello demo job")
+    # 资源初始化，如logger，db等
+    app.ready()
+    app.logger.info("this a script job")

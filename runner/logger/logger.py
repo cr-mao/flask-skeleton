@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler
 class JsonFormatter(logging.Formatter):
     def format(self, record):
         log_record = {
-            'timestamp': self.formatTime(record),
+            'time': self.formatTime(record),
             # 'name': record.name,
             'level': record.levelname,
             'message': record.getMessage(),

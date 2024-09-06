@@ -13,8 +13,11 @@ export PYTHONPATH=.
 # 启动web api服务
 python scripts/web.py
 
-# demo job服务
+# demo job服务, 如一次性运行脚本
 python scripts/demo_job.py
+
+# 守护进程 job服务
+python scripts/daemon_job_demo.py
 ```
 
 ### docs
